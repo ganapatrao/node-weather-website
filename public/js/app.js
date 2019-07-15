@@ -39,7 +39,8 @@ weatherform.addEventListener('submit',(e)=>{
     messageone.textContent='Loading..................'
     //messagetwo.textContent=''    
 
-        fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+      //  fetch('http://localhost:3000/weather?address='+location).then((response)=>{
+        fetch('weather?address='+location).then((response)=>{ //removed 300 for heroku
             response.json().then((data)=>{
                 //console.log(data)
                 if (data.error)

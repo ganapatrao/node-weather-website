@@ -3,6 +3,7 @@ const express = require ('express')
 const app = express()
 const path =require('path')
 const hbs=require('hbs')
+
 //console.log(__dirname)
 //console.log("path is"+ path.join(__dirname,'../templates/views') )
 
@@ -11,7 +12,7 @@ const hbs=require('hbs')
 //console.log(__filename)
 
 
-
+const port =process.env.PORT || 3000
 const directorypath=path.join(__dirname,'../public') //pablic foled has index.html/abouthtml/help.html
 const viewpath=path.join(__dirname,'../templates/views')
 const partialpath=path.join(__dirname,'../templates/partials')
@@ -126,4 +127,4 @@ app.get('/about',(req,res)=>{
 
 
 
-app.listen(3000,console.log("server is running on 3000"))
+app.listen(port,console.log("server is running on 3000"))
